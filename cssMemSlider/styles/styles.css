@@ -1,0 +1,122 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+[class*='__container'] {
+  max-width: 1900px;
+  padding: 0 100px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+}
+
+.slider {
+  margin: 0 auto;
+}
+
+.slides__wrapper {
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 5px solid red;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+.slide {
+  width: 25%;
+  transition: all 0.6s ease;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: end;
+}
+.button {
+  height: 15px;
+  width: 15px;
+  padding: -10px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: white;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 70%;
+  transition: all 0.4s ease;
+}
+.button:hover {
+  border-color: gray;
+}
+
+#slide-one:checked ~ .slides__wrapper > .slides > .slide-margin {
+  margin-left: 0%;
+}
+#slide-two:checked ~ .slides__wrapper > .slides > .slide-margin {
+  margin-left: -25%;
+}
+#slide-three:checked ~ .slides__wrapper > .slides > .slide-margin {
+  margin-left: -50%;
+}
+#slide-four:checked ~ .slides__wrapper > .slides > .slide-margin {
+  margin-left: -75%;
+}
+
+#slide-one:checked ~ .slide__titles > .slide__titles-container > .slide__title-margin {
+  margin-left: 0%;
+}
+#slide-two:checked ~ .slide__titles > .slide__titles-container > .slide__title-margin {
+  margin-left: -25%;
+}
+#slide-three:checked ~ .slide__titles > .slide__titles-container > .slide__title-margin {
+  margin-left: -50%;
+}
+#slide-four:checked ~ .slide__titles > .slide__titles-container > .slide__title-margin {
+  margin-left: -75%;
+}
+
+#slide-one:checked ~ .btn-group > .button_1 {
+  background-color: black;
+}
+#slide-two:checked ~ .btn-group > .button_2 {
+  background-color: black;
+}
+#slide-three:checked ~ .btn-group > .button_3 {
+  background-color: black;
+}
+#slide-four:checked ~ .btn-group > .button_4 {
+  background-color: black;
+}
+
+.button:checked {
+  background-color: red;
+}
+
+.slide__titles {
+  height: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slide__titles-container {
+  display: flex;
+  width: 400%;
+}
+.slide__title {
+  flex: 0 0 25%;
+  transition: all 0.6s ease;
+}
+
+input {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
